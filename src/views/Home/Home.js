@@ -1,21 +1,21 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { dataActions } from '../../actions';
 import { connect } from 'react-redux';
 import { Canvas } from 'react-three-fiber';
-import Scene from '../../components/Scene';
-import Controls from '../../components/Controls';
+import Scene from './Scene';
+import Controls from './Controls';
+import MenuButton from '../../components/MenuButton';
 
 function HomePage() {
-  const [set] = useState(false)
   const mouse = useRef([0, 0])
   const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
   return (
     <div className='canvas'>
+      <MenuButton />
       <Canvas
-        onMouseMove={onMouseMove}
-        onMouseUp={() => set(false)}
-        onMouseDown={() => set(true)}>
+        camera={{ fov: 75, position: [0, 0, 40] }}
+        onMouseMove={onMouseMove}>
         <Scene mouse={mouse}/>
         <Controls />
       </Canvas>

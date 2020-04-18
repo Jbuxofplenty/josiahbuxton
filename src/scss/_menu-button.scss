@@ -1,0 +1,189 @@
+// Menu button
+.menuBtn {
+    z-index: 300;
+    position: fixed;
+    overflow-y: visible;
+    display: inline-block;
+    top: calc(5.5vh + 0.5rem);
+    left: 3.1vw;
+    width: 3.2rem;
+    cursor: pointer;
+}
+
+.hidden_line1 {
+  width: 0rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out; /* Firefox 4 */
+  -webkit-transition: width 1s ease-out; /* Safari and Chrome */
+  -o-transition: width 1s ease-out; /* Opera */
+  -ms-transition: width 1s ease-out; /* Explorer 10 */
+}
+
+.hidden_line2 {
+  width: 0rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 0.5s ease-out;
+  -moz-transition: width 0.5s ease-out; /* Firefox 4 */
+  -webkit-transition: width 0.5s ease-out; /* Safari and Chrome */
+  -o-transition: width 0.5s ease-out; /* Opera */
+  -ms-transition: width 0.5s ease-out; /* Explorer 10 */
+}
+
+.hidden_line3 {
+  width: 0rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 0.25s ease-out;
+  -moz-transition: width 0.25s ease-out; /* Firefox 4 */
+  -webkit-transition: width 0.25s ease-out; /* Safari and Chrome */
+  -o-transition: width 0.25s ease-out; /* Opera */
+  -ms-transition: width 0.25s ease-out; /* Explorer 10 */
+}
+
+.menuBtn_line1 {
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 2s ease-out 0.75s;
+  -moz-transition: width 2s ease-out 0.75s; /* Firefox 4 */
+  -webkit-transition: width 2s ease-out 0.75s; /* Safari and Chrome */
+  -o-transition: width 2s ease-out 0.75s; /* Opera */
+  -ms-transition: width 2s ease-out 0.75s; /* Explorer 10 */
+}
+
+.menuBtn_line2 {
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 1.5s ease-out 0.75s;
+  -moz-transition: width 1.5s ease-out 0.75s; /* Firefox 4 */
+  -webkit-transition: width 1.5s ease-out 0.75s; /* Safari and Chrome */
+  -o-transition: width 1.5s ease-out 0.75s; /* Opera */
+  -ms-transition: width 1.5s ease-out 0.75s; /* Explorer 10 */
+}
+
+.menuBtn_line3 {
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.3rem;
+  transition: width 1s ease-out 0.75s;
+  -moz-transition: width 1s ease-out 0.75s; /* Firefox 4 */
+  -webkit-transition: width 1s ease-out 0.75s; /* Safari and Chrome */
+  -o-transition: width 1s ease-out 0.75s; /* Opera */
+  -ms-transition: width 1s ease-out 0.75s; /* Explorer 10 */
+}
+
+.x {
+  z-index: 300;
+  position: fixed;
+  overflow-y: visible;
+  display: inline-block;
+  top: calc(3vh + 0.5rem);
+  left: 3.1vw;
+  width: 3.2rem;
+  height: 3.2rem;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	display: none;
+  -webkit-animation: fadeInFromNone 2s ease-out;
+  -moz-animation: fadeInFromNone 2s ease-out;
+  -o-animation: fadeInFromNone 2s ease-out;
+  animation: fadeInFromNone 2s ease-out;
+}
+
+.x::before, .x::after {
+  position: fixed;
+  top: calc(6.4vh + 0.5rem);
+  left: 4.25vw;
+  width: 1.2rem;
+  height: 0.12rem;
+	content: "";
+	background-color: #eef5df;
+	display: block;
+}
+
+.x::before {
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.x::after {
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.x:hover { cursor: pointer; }
+
+.x:hover::before, .x:hover::after { display: block; }
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    40% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    40% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    40% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    40% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

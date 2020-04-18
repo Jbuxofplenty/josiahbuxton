@@ -10,12 +10,10 @@ const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
 
 class DefaultLayoutPage extends Component {
-  loading = () => <div className="animated fadeIn pt-1 text-center esans">Loading...</div>
-
   render() {
     return (
       <div className="app">
-        <Suspense  fallback={this.loading()}>
+        <Suspense fallback={null}>
           <DefaultHeader/>
           <div className="app-body esans">
             <main className="main">
