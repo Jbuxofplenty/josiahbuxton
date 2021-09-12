@@ -1,2 +1,2 @@
 export * from './history';
-export { store, persistor } from './store';
+export { waitPromise } from './functions';

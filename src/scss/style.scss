@@ -9,11 +9,13 @@
 @import "variables";
 
 // Option A: Include all of Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Custom
 @import "custom";
 @import "menu-button";
+@import "projects";
+@import "name-swarm";
 
 // ie fixes
 @import "ie-fix";

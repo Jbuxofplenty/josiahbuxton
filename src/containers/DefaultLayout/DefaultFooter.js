@@ -1,9 +1,7 @@
 import { Component } from 'react';
-import { userActions, alertActions } from '../../actions';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-export class FooterPage extends Component {
+export class DefaultFooter extends Component {
   constructor(props) {
     super(props);
 
@@ -25,23 +23,4 @@ export class FooterPage extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const { authentication } = state;
-  const { user, userData } = authentication;
-  return {
-    user,
-    userData,
-  };
-}
-
-const mapDispatchToProps = (dispatch, history) => {
-  return {
-    errorVisible: (show) => dispatch(alertActions.visible(show)),
-    error: (errorMessage) => dispatch(alertActions.error(errorMessage)),
-    logout: () => dispatch(userActions.logout()),
-    reset: () => dispatch(userActions.reset())
-  };
-}
-
-const DefaultFooter = connect(mapStateToProps, mapDispatchToProps)(withRouter(FooterPage));
-export default DefaultFooter;
+export default withRouter(DefaultFooter);

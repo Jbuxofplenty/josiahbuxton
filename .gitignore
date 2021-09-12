@@ -6,6 +6,10 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 
+# Locks
+package-lock.json
+yarn.lock
+
 # Build
 build
 
