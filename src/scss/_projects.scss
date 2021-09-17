@@ -69,14 +69,17 @@ a:hover {
 
 .frame__links {
   margin: 1rem 0;
+  white-space: nowrap;
 }
 
 .frame__link:not(:last-child) {
   margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .frame__nav .frame__link:first-child {
   margin-right: 1.5rem;
+  white-space: nowrap;
 }
 
 .bottom-left {
